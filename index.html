@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nolwenn Marjou — Knowledge & Documentation Leader</title>
+<meta name="description" content="Nolwenn Marjou — Knowledge & Documentation Leader. Turning complex software into clear, AI-powered, multilingual knowledge. 15+ years across documentation, product, and localization." />
+
+<!-- ⬇️ Replace the base URL below with your live site, e.g. https://yourusername.github.io -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Nolwenn Marjou — Knowledge & Documentation Leader" />
+<meta property="og:description" content="Turning complex software into clear, AI-powered, multilingual knowledge. 15+ years across documentation, product, and localization." />
+<meta property="og:image" content="https://yourusername.github.io/og-image.png" />
+<meta property="og:url" content="https://yourusername.github.io/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nolwenn Marjou — Knowledge & Documentation Leader" />
+<meta name="twitter:description" content="Turning complex software into clear, AI-powered, multilingual knowledge." />
+<meta name="twitter:image" content="https://yourusername.github.io/og-image.png" />
+
+<!-- Inline emoji favicon (no extra file needed) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>" />
+
+<style>
+  :root {
+    --accent: #8b5cf6;
+    --accent-2: #c084fc;
+    --accent-deep: #6d28d9;
+  }
+  [data-theme="dark"] {
+    --bg: #0e0b1a; --bg-soft: #171231; --card: #1a1530; --card-border: #2c2350;
+    --ink: #f4f1ff; --body: #c7c2e0; --muted: #8b86a8; --line: #2c2350;
+    --glow: rgba(139,92,246,0.30); --shadow: rgba(0,0,0,0.45);
+  }
+  [data-theme="light"] {
+    --bg: #ffffff; --bg-soft: #faf8ff; --card: #ffffff; --card-border: #e7e3f3;
+    --ink: #1f2330; --body: #3a3f51; --muted: #6b7280; --line: #e7e3f3;
+    --glow: rgba(139,92,246,0.18); --shadow: rgba(91,33,182,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--body); background: var(--bg); line-height: 1.65; -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; transition: background .4s ease, color .4s ease;
+  }
+  a { color: var(--accent-2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .bg-blobs { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .55; }
+  .blob.b1 { width: 480px; height: 480px; background: #7c3aed; top: -140px; left: -120px; animation: float1 18s ease-in-out infinite; }
+  .blob.b2 { width: 420px; height: 420px; background: #c084fc; top: 30%; right: -130px; animation: float2 22s ease-in-out infinite; }
+  .blob.b3 { width: 380px; height: 380px; background: #4f46e5; bottom: -120px; left: 25%; animation: float3 20s ease-in-out infinite; }
+  [data-theme="light"] .blob { opacity: .22; }
+  @keyframes float1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(60px,40px)} }
+  @keyframes float2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-50px,60px)} }
+  @keyframes float3 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(40px,-50px)} }
+
+  .wrap { position: relative; z-index: 1; }
+
+  .toggle {
+    position: fixed; top: 20px; right: 20px; z-index: 20; width: 46px; height: 46px; border-radius: 50%;
+    border: 1px solid var(--card-border); background: var(--card); color: var(--ink); font-size: 1.2rem;
+    cursor: pointer; display: grid; place-items: center; box-shadow: 0 6px 20px var(--shadow);
+    transition: transform .25s ease, background .4s ease;
+  }
+  .toggle:hover { transform: rotate(20deg) scale(1.08); }
+
+  .hero { text-align: center; padding: 120px 24px 70px; position: relative; }
+  .hero .kicker { display:inline-block; font-size:.78rem; letter-spacing:3px; text-transform:uppercase; color:var(--accent-2); border:1px solid var(--card-border); padding:6px 14px; border-radius:999px; background:var(--card); margin-bottom:26px; }
+  .hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 800; letter-spacing: -1px; color: var(--ink);
+    background: linear-gradient(120deg, var(--accent-2), var(--accent), #818cf8);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero .tagline { font-size: clamp(1.05rem, 2.6vw, 1.5rem); margin-top: 18px; color: var(--body); min-height: 1.6em; }
+  .hero .tagline .rot { color: var(--accent-2); font-weight: 700; border-right: 2px solid var(--accent-2); padding-right: 2px; }
+  .hero .meta { margin-top: 26px; font-size: 0.95rem; color: var(--muted); }
+  .cta-row { margin-top: 32px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .cta { display: inline-block; padding: 13px 28px; font-weight: 700; border-radius: 999px; font-size: 0.95rem; transition: transform .15s ease, box-shadow .15s ease; }
+  .cta.primary { background: linear-gradient(120deg, var(--accent), var(--accent-deep)); color: #fff; box-shadow: 0 10px 30px var(--glow); }
+  .cta.ghost { border: 1px solid var(--card-border); color: var(--ink); background: var(--card); }
+  .cta:hover { transform: translateY(-3px); text-decoration: none; }
+
+  .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; max-width: 860px; margin: 10px auto 0; padding: 0 24px; }
+  .stat { background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; padding: 26px 18px; text-align: center; box-shadow: 0 10px 30px var(--shadow); transition: transform .2s ease, border-color .2s ease; }
+  .stat:hover { transform: translateY(-5px); border-color: var(--accent); }
+  .stat .num { font-size: 2.2rem; font-weight: 800; color: var(--accent-2); }
+  .stat .lab { font-size: 0.88rem; color: var(--muted); margin-top: 4px; }
+
+  main { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 64px 0 8px; }
+  h2 { font-size: 1.5rem; font-weight: 800; color: var(--ink); margin-bottom: 28px; display: flex; align-items: center; gap: 12px; }
+  h2::before { content: ""; width: 28px; height: 4px; border-radius: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+  h3 { font-size: 1.12rem; color: var(--ink); font-weight: 700; }
+  p { margin-bottom: 14px; }
+
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before { content:""; position:absolute; left:7px; top:6px; bottom:6px; width:2px; background: linear-gradient(var(--accent), transparent); }
+  .item { position: relative; margin-bottom: 34px; }
+  .item::before { content:""; position:absolute; left:-28px; top:7px; width:14px; height:14px; border-radius:50%; background:var(--bg); border:3px solid var(--accent); box-shadow:0 0 0 4px var(--glow); transition: transform .2s ease; }
+  .item:hover::before { transform: scale(1.25); }
+  .item-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; }
+  .item-head .dates { color: var(--muted); font-size: 0.85rem; font-style: italic; white-space: nowrap; }
+  .company { color: var(--accent-2); font-weight: 600; font-size: 0.92rem; margin: 3px 0 10px; }
+  .company .loc { color: var(--muted); font-weight: 400; }
+  ul { list-style: none; }
+  ul li { position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 0.96rem; }
+  ul li::before { content:""; position:absolute; left:2px; top:10px; width:6px; height:6px; border-radius:50%; background: var(--accent); }
+
+  .pcard { background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; padding: 22px 24px; margin-bottom: 16px; box-shadow: 0 10px 30px var(--shadow); transition: transform .2s ease, border-color .2s ease; }
+  .pcard:hover { transform: translateY(-4px); border-color: var(--accent); }
+  .pcard .ptitle { color: var(--ink); font-weight: 700; margin-bottom: 6px; }
+
+  .skillrow { margin-bottom: 18px; }
+  .skillrow .label { font-weight: 700; color: var(--ink); display: block; margin-bottom: 8px; font-size: 0.95rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 9px; }
+  .tag { background: var(--bg-soft); border: 1px solid var(--card-border); color: var(--body); padding: 6px 13px; border-radius: 9px; font-size: 0.84rem; cursor: default; transition: transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease; }
+  .tag:hover { transform: translateY(-3px) scale(1.05); background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; }
+  .lang { background: var(--card); border:1px solid var(--card-border); border-radius:12px; padding:14px 18px; }
+  .lang b { color: var(--ink); } .lang span { color: var(--muted); font-size: .9rem; }
+  .edu-item { margin-bottom: 14px; }
+  .edu-item .school { font-weight: 700; color: var(--ink); }
+  .edu-item .deg { font-size: 0.91rem; }
+  .edu-item .yr { color: var(--muted); font-size: 0.83rem; font-style: italic; }
+
+  /* ---- Contact form ---- */
+  .contact-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 18px; padding: 30px 28px; box-shadow: 0 14px 40px var(--shadow); }
+  .field { margin-bottom: 16px; }
+  .field label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+  .field input, .field textarea {
+    width: 100%; background: var(--bg-soft); border: 1px solid var(--card-border); color: var(--ink);
+    border-radius: 10px; padding: 12px 14px; font: inherit; font-size: 0.95rem; transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .field input:focus, .field textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--glow); }
+  .field textarea { resize: vertical; min-height: 120px; }
+  .submit-btn {
+    background: linear-gradient(120deg, var(--accent), var(--accent-deep)); color: #fff; border: none; cursor: pointer;
+    padding: 13px 30px; border-radius: 999px; font-weight: 700; font-size: 0.95rem; transition: transform .15s ease, opacity .2s ease;
+  }
+  .submit-btn:hover { transform: translateY(-2px); }
+  .submit-btn:disabled { opacity: .6; cursor: default; transform: none; }
+  .form-note { font-size: 0.85rem; color: var(--muted); margin-top: 14px; }
+  .form-status { margin-top: 14px; font-weight: 600; display: none; }
+  .form-status.ok { display: block; color: #34d399; }
+  .form-status.err { display: block; color: #f87171; }
+
+  footer { text-align: center; padding: 50px 24px 70px; color: var(--muted); font-size: 0.9rem; margin-top: 30px; border-top: 1px solid var(--line); }
+  footer a { font-weight: 600; }
+
+  @media (max-width: 680px) {
+    .stats { grid-template-columns: 1fr; }
+    .grid2 { grid-template-columns: 1fr; }
+    .hero { padding: 96px 20px 56px; }
+  }
+</style>
+</head>
+<body>
+  <div class="bg-blobs"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+  <button class="toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light / dark">🌙</button>
+
+  <div class="wrap">
+    <header class="hero">
+      <span class="kicker">Knowledge · Product · Localization</span>
+      <h1>Nolwenn Marjou</h1>
+      <p class="tagline">I turn complex software into <span class="rot" id="rot">clear knowledge</span></p>
+      <p class="meta">📍 Thonon-les-Bains, France &nbsp;·&nbsp; <a href="mailto:nolwenn.marjou@gmail.com">nolwenn.marjou@gmail.com</a></p>
+      <div class="cta-row">
+        <a class="cta primary" href="./Nolwenn_Marjou_CV.pdf" download>Download CV (PDF)</a>
+        <a class="cta ghost" href="#contact">Contact me</a>
+      </div>
+    </header>
+
+    <div class="stats reveal">
+      <div class="stat"><div class="num" data-target="15" data-suffix="+">0</div><div class="lab">Years in software</div></div>
+      <div class="stat"><div class="num" data-target="70" data-suffix="+">0</div><div class="lab">Languages localized</div></div>
+      <div class="stat"><div class="num" data-target="4" data-suffix="">0</div><div class="lab">Product lines led</div></div>
+    </div>
+
+    <main>
+      <section id="about" class="reveal">
+        <h2>About</h2>
+        <p>Technical translator and writer by training, I have grown from freelance translation into technical writing and now lead Product Knowledge, with hands-on expertise across the whole spectrum: technical content, documentation, training material, knowledge bases, and localization.</p>
+        <p>I am a patient, detail-oriented leader who likes untangling hard problems, building strong teams, and shipping products that genuinely help the people using them, and I am always happy to learn something new along the way.</p>
+      </section>
+
+      <section id="experience" class="reveal">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="item">
+            <div class="item-head"><h3>Head of Product Knowledge</h3><span class="dates">Mar 2018 – Present</span></div>
+            <div class="company">beqom <span class="loc">· Nyon, Switzerland · B2B SaaS enterprise compensation &amp; performance management software</span></div>
+            <ul>
+              <li>Lead and mentor a global team, guiding two writers to produce structured, high-quality documentation across four product lines.</li>
+              <li>Introduced docs-as-code workflows (Git, Markdown, CI/CD), tightening collaboration and aligning documentation releases with engineering and product cycles.</li>
+              <li>Author complex technical content (REST API guides, SDK documentation, admin tutorials, use-case content) for both technical and non-technical readers.</li>
+              <li>Contributed to support ticket reduction efforts by building self-serve content and knowledge bases that help users solve issues on their own.</li>
+              <li>Own localization across 70+ languages, running the multilingual documentation strategy and partnering with vendors to keep quality and consistency high.</li>
+              <li>Partner closely with Product, Engineering, and Support to keep documentation and training materials accurate and genuinely useful.</li>
+              <li>Bring AI into knowledge management, implementing AI-enhanced processes for team productivity and AI-powered experiences for knowledge base users.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="item-head"><h3>Technical Writer</h3><span class="dates">Mar 2014 – Mar 2018</span></div>
+            <div class="company">New Access (now FNZ) <span class="loc">· Geneva, Switzerland</span></div>
+            <ul>
+              <li>Defined the documentation strategy and roadmap.</li>
+              <li>Created and maintained documentation for 5+ software products.</li>
+              <li>Translated product documentation from English into French.</li>
+              <li>Managed the documentation library and change-management process.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="item-head"><h3>Freelance Technical Translator</h3><span class="dates">Jun 2009 – Mar 2018</span></div>
+            <div class="company">CQFD Traductions <span class="loc">· Thonon-les-Bains, France · Freelance</span></div>
+            <ul>
+              <li>Translated, edited, proofread, and post-edited (post-MT) technical content across automotive, machinery, IT (hardware &amp; software), and medical domains.</li>
+              <li>Built long-term translation partnerships with large translation and localization companies.</li>
+              <li>Reviewed technical translations and managed translation projects.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="item-head"><h3>Project Coordinator</h3><span class="dates">Jun 2011 – Oct 2011</span></div>
+            <div class="company">Version Internationale <span class="loc">· Lyon, France</span></div>
+            <ul>
+              <li>Ran end-to-end project management for large-scale and smaller projects.</li>
+              <li>Managed client relationships and coordinated vendors.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="item-head"><h3>Post-MT Editor / Translator</h3><span class="dates">Mar 2008 – Jun 2009</span></div>
+            <div class="company">Altica Traductions <span class="loc">· Voiron, France</span></div>
+            <ul>
+              <li>Post-edited (post-MT) large-scale IT, automotive, and technical translation projects.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="reveal">
+        <h2>Personal Projects · AI &amp; Automation</h2>
+        <p>Self-initiated side projects exploring AI in knowledge and localization workflows:</p>
+        <div class="pcard"><div class="ptitle">AI agent skills for document screening</div>Built and evaluated custom AI agent skills that automate document screening and classification, using eval-driven testing to benchmark accuracy and cost against a no-skill baseline (reached 100% pass rate vs. 92%).</div>
+        <div class="pcard"><div class="ptitle">Automated localization pipeline</div>Developed a pipeline that generates Lokalise-ready glossaries and translation memories across 6+ languages, with auto-fill and manual-review flagging for ambiguous terms.</div>
+        <div class="pcard"><div class="ptitle">LLMs in knowledge workflows</div>Integrated large language models (Anthropic Claude, ChatGPT, Google Gemini) into content and knowledge base workflows to speed up authoring and improve end-user self-serve experiences.</div>
+      </section>
+
+      <section id="skills" class="reveal">
+        <h2>Skills</h2>
+        <div class="skillrow"><span class="label">Knowledge &amp; Documentation</span><div class="tags">
+          <span class="tag">Knowledge Management</span><span class="tag">Technical Writing</span><span class="tag">Software Documentation</span><span class="tag">Docs-as-code</span><span class="tag">Content Strategy</span><span class="tag">UX Writing</span><span class="tag">CMS</span><span class="tag">Proofreading</span>
+        </div></div>
+        <div class="skillrow"><span class="label">Localization</span><div class="tags">
+          <span class="tag">Localization Management</span><span class="tag">Internationalization</span><span class="tag">Globalization</span><span class="tag">Website &amp; Software Localization</span><span class="tag">Localization Testing</span><span class="tag">Technical Translation</span><span class="tag">Post-MT Editing</span>
+        </div></div>
+        <div class="skillrow"><span class="label">Tools</span><div class="tags">
+          <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Markdown</span><span class="tag">HTML5</span><span class="tag">CSS</span><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">MadCap Flare</span><span class="tag">Author-it</span><span class="tag">Lokalise</span><span class="tag">SDL Trados</span><span class="tag">Wordfast</span>
+        </div></div>
+        <div class="skillrow"><span class="label">AI</span><div class="tags">
+          <span class="tag">Anthropic Claude</span><span class="tag">ChatGPT</span><span class="tag">Google Gemini</span><span class="tag">AI-enhanced processes</span>
+        </div></div>
+        <div class="skillrow"><span class="label">Leadership</span><div class="tags">
+          <span class="tag">Team Leadership</span><span class="tag">Product Management</span><span class="tag">Strategy</span><span class="tag">Change Management</span><span class="tag">Project Management</span>
+        </div></div>
+      </section>
+
+      <section id="languages" class="reveal">
+        <h2>Languages</h2>
+        <div class="grid2">
+          <p class="lang"><b>French</b><br><span>Native / Bilingual</span></p>
+          <p class="lang"><b>English</b><br><span>Native / Bilingual</span></p>
+          <p class="lang"><b>German</b><br><span>Professional Working</span></p>
+        </div>
+      </section>
+
+      <section id="education" class="reveal">
+        <h2>Education</h2>
+        <div class="grid2">
+          <div class="edu-item"><div class="school">Université de Bretagne Occidentale</div><div class="deg">Master’s (M2), Technical Translation &amp; Technical Writing</div><div class="yr">2007 – 2008</div></div>
+          <div class="edu-item"><div class="school">Université Jean Moulin (Lyon III)</div><div class="deg">Master’s (M1), English / Linguistics</div><div class="yr">2006 – 2007</div></div>
+          <div class="edu-item"><div class="school">Université Jean Moulin (Lyon III)</div><div class="deg">Bachelor’s Degree, English Linguistics</div><div class="yr">2005 – 2006</div></div>
+          <div class="edu-item"><div class="school">Université de Reims Champagne-Ardenne</div><div class="deg">Undergraduate studies, English Linguistics</div><div class="yr">2002 – 2005</div></div>
+        </div>
+      </section>
+
+      <section id="contact" class="reveal">
+        <h2>Get in touch</h2>
+        <div class="contact-card">
+          <!-- ⬇️ Replace YOUR_FORM_ID with your Formspree form ID (see deploy notes). -->
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send message</button>
+            <p class="form-status" id="formStatus"></p>
+          </form>
+          <p class="form-note">Prefer email? Reach me directly at <a href="mailto:nolwenn.marjou@gmail.com">nolwenn.marjou@gmail.com</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Let’s talk — <a href="mailto:nolwenn.marjou@gmail.com">nolwenn.marjou@gmail.com</a> · <a href="https://www.linkedin.com/in/nolwenn-marjou" target="_blank" rel="noopener">LinkedIn</a></p>
+    </footer>
+  </div>
+
+<script>
+  const root = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('theme');
+  if (saved) root.setAttribute('data-theme', saved);
+  const setIcon = () => btn.textContent = root.getAttribute('data-theme') === 'dark' ? '🌙' : '☀️';
+  setIcon();
+  btn.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next); localStorage.setItem('theme', next); setIcon();
+  });
+
+  const words = ['clear knowledge', 'AI-powered docs', 'multilingual content', 'self-serve experiences'];
+  let wi = 0, ci = 0, deleting = false;
+  const rot = document.getElementById('rot');
+  function typeLoop() {
+    const w = words[wi];
+    rot.textContent = deleting ? w.slice(0, ci--) : w.slice(0, ci++);
+    if (!deleting && ci > w.length) { deleting = true; setTimeout(typeLoop, 1400); return; }
+    if (deleting && ci < 0) { deleting = false; ci = 0; wi = (wi + 1) % words.length; }
+    setTimeout(typeLoop, deleting ? 45 : 90);
+  }
+  typeLoop();
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const counters = document.querySelectorAll('.num');
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target, target = +el.dataset.target, suffix = el.dataset.suffix || '';
+      let n = 0; const step = Math.max(1, Math.round(target / 40));
+      const tick = () => { n += step; if (n >= target) n = target; el.textContent = n + suffix; if (n < target) requestAnimationFrame(tick); };
+      tick(); cio.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => cio.observe(c));
+
+  // ---- Contact form (async submit via Formspree) ----
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btnEl = form.querySelector('.submit-btn');
+    if (form.action.includes('YOUR_FORM_ID')) {
+      status.className = 'form-status err';
+      status.textContent = 'Form not configured yet — add your Formspree ID, or email me directly.';
+      return;
+    }
+    btnEl.disabled = true; btnEl.textContent = 'Sending…';
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      if (res.ok) {
+        form.reset();
+        status.className = 'form-status ok';
+        status.textContent = 'Thanks! Your message has been sent.';
+      } else { throw new Error(); }
+    } catch {
+      status.className = 'form-status err';
+      status.textContent = 'Something went wrong. Please email me directly.';
+    } finally { btnEl.disabled = false; btnEl.textContent = 'Send message'; }
+  });
+</script>
+</body>
+</html>
